@@ -10,8 +10,8 @@ job('nodejs') {
     }
    steps {
       dockerBuildAndPublish {
-          repositoryName('nodejs44')
-          tag('${GIT_REVISION,length=7}')
+          repositoryName('nodejs34')
+          tag('${GIT_REVISION,length=10}')
           registryCredentials('dockercreds')
           forcePull(false)
           createFingerprints(false)
