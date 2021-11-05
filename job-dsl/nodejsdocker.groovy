@@ -1,10 +1,8 @@
 job('nodejs') {
     scm {
-        git {
-            remote {
-                github('https://github.com/ajit8626/jenkins-course.git', 'https')
-                credentials('Git creds')
-            }
+         git('git://github.com/wardviaene/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
+            node / gitConfigName('DSL User')
+            node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
     }
     wrappers {
