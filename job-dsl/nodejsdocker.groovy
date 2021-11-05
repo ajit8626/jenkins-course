@@ -8,9 +8,7 @@ job('nodejs') {
     wrappers {
     	nodejs('nodejs')
     }
-    extensions {
-        wipeWorkspace()
-    }
+
    steps {
       dockerBuildAndPublish {
           repositoryName('nodejs34')
