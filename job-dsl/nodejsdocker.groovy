@@ -8,8 +8,10 @@ job('nodejs') {
     wrappers {
     	nodejs('nodejs')
     }
+    extensions {
+        wipeWorkspace()
+    }
    steps {
-      cleanWs()
       dockerBuildAndPublish {
           repositoryName('nodejs34')
           tag('${GIT_REVISION,length=10}')
