@@ -2,7 +2,7 @@ job('nodejs') {
     scm {
         github('https://github.com/ajit8626/jenkins-course.git') {
         	node -> 
-        	node / gitConfigName('ab8626')
+        	node / gitConfigName('ajit8626')
         	node / gitConfigEmail('ab8626@gmail.com')        
         }
     }
