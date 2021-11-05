@@ -8,15 +8,15 @@ job('nodejs') {
     wrappers {
     	nodejs('nodejs')
     }
-
    steps {
-      dockerBuildAndPublish {
-          repositoryName('nodejs34')
-          tag('${GIT_REVISION,length=10}')
-          registryCredentials('dockercreds')
-          forcePull(false)
-          createFingerprints(false)
-          skipDecorate()
+        dockerBuildAndPublish {
+            repositoryName('ab8626/docker-nodejs-demo')
+            tag('${GIT_REVISION,length=9}')
+            registryCredentials('dockercreds')
+            forcePull(false)
+            forceTag(false)
+            createFingerprints(false)
+            skipDecorate()
         }
     }
 }
