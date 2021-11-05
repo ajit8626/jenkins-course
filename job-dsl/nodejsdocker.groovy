@@ -12,7 +12,7 @@ job('nodejs') {
       dockerBuildAndPublish {
           repositoryName('nodejs44')
           tag('${GIT_REVISION,length=7}')
-          registryCredentials('docker creds')
+          registryCredentials('dockercreds')
           forcePull(false)
           createFingerprints(false)
           skipDecorate()
