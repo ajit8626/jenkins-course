@@ -12,7 +12,7 @@ job('nodejs') {
     }
    steps {
       dockerBuildAndPublish {
-          repositoryName('nodejs')
+          repositoryName('nodejs44')
           tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
           registryCredentials('docker creds')
           forcePull(false)
