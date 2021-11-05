@@ -9,7 +9,7 @@ job('nodejs') {
     	nodejs('nodejs')
     }
    steps {
-      wipeWorkspace()
+      cleanWs()
       dockerBuildAndPublish {
           repositoryName('nodejs34')
           tag('${GIT_REVISION,length=10}')
